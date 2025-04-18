@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Hero from './components/Hero';
+import Deals from './components/Deals';
+import BeatStarsEmbed from './components/BeatStarsEmbed';
+import Footer from './components/Footer';
+import AOS from 'aos';
 
-function App() {
+const App = () => {
+  React.useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-dark text-white min-vh-100">
+      <Hero />
+      <Deals />
+      <BeatStarsEmbed />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
