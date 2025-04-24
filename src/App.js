@@ -1,9 +1,9 @@
 import React from 'react';
 import Hero from './components/Hero';
-import Deals from './components/Deals';
 import BeatStarsEmbed from './components/BeatStarsEmbed';
 import Footer from './components/Footer';
 import AOS from 'aos';
+import Notification from './components/Notification'
 
 const App = () => {
   React.useEffect(() => {
@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div className="bg-dark text-white min-vh-100">
       <Hero />
-      <Deals />
+      <Notification />
       <BeatStarsEmbed />
       <Footer />
     </div>
