@@ -45,13 +45,21 @@ const CountdownTimer = ({ targetDate }) => {
       <style>
         {`
           .flash-effect {
-            animation: subtleFlash 1.0s ease;
+            animation: subtleFlash 2.0s ease;
+            animation: subtleFlash 2.0s ease-out;
             border-radius: 8px;
+            display: inline-block; /* Ensures animation applies properly */
+            padding: 0 4px; /* Adds some space around the text */
+            transform-origin: center; /* For smooth scaling */
+
           }
           @keyframes subtleFlash {
-            0% { background-color: transparent; }
-            50% { background-color: rgb(255, 0, 0); }
-            100% { background-color: transparent; }
+            0% { background-color: transparent; 
+                 box-shadow: none }
+            50% { background-color: rgba(243, 127, 127, 0.9); 
+                  box-shadow: 0 0 10px rgba(243, 127, 127, 0.5); /* Added glow effect */}
+            100% { background-color: transparent; 
+                   box-shadow: none}
           }
         `}
       </style>

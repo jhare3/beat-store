@@ -24,7 +24,7 @@ const Notification = () => {
 
       <section className="py-4 bg-black text-center text-white" data-aos="fade-up">
         <div className="glowing-notification">
-          <p className="mb-3">⬇️ Type the title of the beat you're looking for into the search bar below ⬇️</p>
+          <p className="mb-3">⬇️ <i>Type the title of the beat you're looking for into the search bar below</i> ⬇️</p>
         </div>
       </section>
     </>

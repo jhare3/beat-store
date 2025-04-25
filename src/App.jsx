@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import BeatStarsEmbed from "./components/BeatStarsEmbed";
 import Notification from "./components/Notification";
+import ChatBot from "./components/ChatBot"
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       
       <Hero />
       <Notification />
+      <ChatBot/>
       <div className="space-y-12"> {/* Adds consistent spacing between sections */}
         <BeatStarsEmbed />
       </div>

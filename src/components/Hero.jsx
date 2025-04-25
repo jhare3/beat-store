@@ -31,7 +31,7 @@ const Hero = () => {
         whiteSpace: 'nowrap',
         color: 'black' // Explicit black
       }}>
-        Kingsford Beats
+        Chill Ass Hip-Hop Beats
       </h1>
       
       {/* Right-aligned countdown - dark elements for contrast */}
