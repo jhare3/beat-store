@@ -7,7 +7,6 @@ const BeatStarsEmbed = () => {
         src="https://player.beatstars.com/?storeId=120083"
         width="100%"
         height="1000"
-        frameBorder="0"
         allow="autoplay"
         className="w-100 rounded-lg shadow-lg"
         title="BeatStars Player"

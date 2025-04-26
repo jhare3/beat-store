@@ -9,13 +9,11 @@ const App = () => {
   return (
     <div className="font-sans text-white bg-gradient-to-b from-gray-900 via-gray-800 to-black min-h-screen relative">
       {/* Wrap the content inside a Bootstrap container */}
-      <div className="container-fluid">
+      <div className="container-fluid p-0 m-0"> {/* Remove padding and margin */}
         {/* Main Content */}
         <Hero />
         <Notification />
-        <div className="space-y-12 pb-24"> {/* Added padding-bottom for footer space */}
-          <BeatStarsEmbed />
-        </div>
+        <BeatStarsEmbed /> 
         <Footer />
       </div>
       <ChatBot />
@@ -24,3 +22,4 @@ const App = () => {
 };
 
 export default App;
+

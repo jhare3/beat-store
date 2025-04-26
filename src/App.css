@@ -7,19 +7,3 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-@media (min-width: 768px) {
-  section {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  h1 {
-    flex: 0 1 50%; /* 50% width on larger screens */
-    text-align: left;
-  }
-
-  .countdown-container {
-    flex: 0 1 50%;
-    text-align: right;
-  }
-}
