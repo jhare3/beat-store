@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const CountdownTimer = ({ targetDate }) => {
+const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -13,8 +13,11 @@ const CountdownTimer = ({ targetDate }) => {
     let lastFlashedSecond = -1; // Track the last second we flashed to avoid duplicates
 
     const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
+      const now = new Date();
+      const midnight = new Date();
+      midnight.setHours(24, 0, 0, 0); // Set to tonight at 00:00:00
+
+      const distance = midnight - now;
 
       if (distance < 0) {
         clearInterval(interval);
@@ -26,7 +29,7 @@ const CountdownTimer = ({ targetDate }) => {
         days: Math.floor(distance / (1000 * 60 * 60 * 24)),
         hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
         minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: seconds
+        seconds: seconds,
       });
 
       // Flash every 15 seconds (0, 15, 30, 45, etc.)
@@ -38,7 +41,7 @@ const CountdownTimer = ({ targetDate }) => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [targetDate]);
+  }, []);
 
   return (
     <div style={{
@@ -62,4 +65,3 @@ const CountdownTimer = ({ targetDate }) => {
 };
 
 export default CountdownTimer;
-
